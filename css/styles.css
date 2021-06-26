@@ -2441,8 +2441,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #fec810;
-  border-color: #fec503;
+  background-color: #76d2f4;
+  border-color: #76d2f4;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -10467,7 +10467,7 @@ section#info {
   background-position: center;
 }
 section#info .section-heading {
-  color: #fff;
+  color: #000;
 }
 section#info form#contactForm .form-group {
   margin-bottom: 1.5rem;
