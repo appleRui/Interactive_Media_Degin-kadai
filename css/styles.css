@@ -10519,3 +10519,36 @@ section#info form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.map01-bg{
+  position: relative;
+  margin: 5px;
+  height: 500px;
+  background-image: url("../assets/img/access_map01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.map02-bg{
+  position: relative;
+  margin: 5px;
+  height: 500px;
+  background-image: url("../assets/img/access_map02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.map01-heading{
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  background-color: #76d2f4;
+  color: black;
+}
+
+/* .subway-intro-area > li{
+  list-style: inside;
+} */
