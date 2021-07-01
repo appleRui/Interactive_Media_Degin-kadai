@@ -1097,33 +1097,28 @@ div.slide-content {
 
 
 /*　ーーーーー access_section　ーーーーー　*/
-.map01-bg{
+.map-bg{
   position: relative;
   margin: 5px;
   height: 500px;
-  background-image: url("../assets/img/access_map01.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.map02-bg{
-  position: relative;
-  margin: 5px;
-  height: 500px;
-  background-image: url("../assets/img/access_map02.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.map01-heading{
+.map-heading{
   font-weight: bold;
   position: absolute;
   width: 100%;
   padding: 10px;
   background-color: #76d2f4;
   color: black;
+}
+
+@media (max-width: 578px) {
+.map-bg{
+  height: 440px;
+}
 }
 
 /*　ーーーーー info_section　ーーーーー　*/
@@ -1210,21 +1205,9 @@ section#info form#contactForm ::-webkit-input-placeholder {
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 578px) {
 #program .program-item .program-link .program-hover {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(38, 173, 223, 0.5);
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity ease-in-out 0.25s;
-}
-#program .program-item .program-link-end .program-hover .program-hover-content {
-  font-size: 1.25rem;
-  color: white;
-}
-#program .program-item .pogram-link .program-hover {
   opacity: 1;
+}
 }
