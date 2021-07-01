@@ -5,21 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>東京電機大学工学部第二部オープンシャンパス2021</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- import fontawesome -->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="css/styles.css" rel="stylesheet" />
+        <!-- import orinal css -->
+<!--         <link href="css/styles.css" rel="stylesheet" /> -->
+        <link href="css/stylesheet.css" rel="stylesheet" />
+        <!-- import slick-clidar-css -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <!-- import adobe-font -->
+        <script>
+            (function(d) {
+            var config = {
+                kitId: 'myl4xsn',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
     </head>
     <body id="page-top">
-        <!-- NAVBAR -->
+        <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <!-- 各セッションは.cotainerによって横幅が指定されている（レスポンシブ時） -->
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">東京電機大学</a>
+                <!-- レスポンシブ時のハンバーガーメニュー -->
+                <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family: sans-serif;">東京電機大学</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
                 </button>
+                <!-- ヘッダーリスト -->
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#next">Next</a></li>
@@ -31,15 +48,15 @@
                 </div>
             </div>
         </nav>
-        <!-- MV-->
+        <!-- mv-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading"></div>
-                <div class="masthead-heading text-uppercase"><img src="./assets/img/logo.png" alt="logo" style="width: 450px"></div>
-                <h3>東京電機大学工学部第二部のオープンキャンパス</h3>
-                <!--                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
+                <div class="mb-4"><img src="./assets/img/logo.png" alt="logo" class="mv-img"></div>
+                <h3 class="mv-ttl">東京電機大学工学部第二部</h3>
+                <h3 class="mt-2 mv-ttl">オープンキャンパス</h3>
             </div>
         </header>
+        <!-- next -->
         <section class="page-section bg-light" id="next">
             <div class="container">
                 <div class="text-center">
@@ -48,7 +65,9 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- 各日程 -->
                         <div class="portfolio-item">
+                            <!--終了している日程は.portfolio-link-endで終了のポップを出す-->
                             <div class="portfolio-link-end">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content">終了しました</div>
@@ -65,10 +84,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- 各日程 -->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                            <a class="portfolio-link js-scroll-trigger" href="#Department">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"><i class="fas fa-angle-double-down fa-3x"></i></div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
                             </a>
@@ -82,9 +102,10 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                           <!-- 各日程 -->
+                            <a class="portfolio-link js-scroll-trigger" href="#Department">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"><i class="fas fa-angle-double-down fa-3x"></i></div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
                             </a>
@@ -99,230 +120,135 @@
                 </div>
             </div>
         </section>
-        <!-- Services-->
+        <!-- department-->
         <section class="page-section" id="Department">
             <div class="container">
+                <!-- セクションテーマ -->
                 <div class="text-center">
-                    <h2 class="section-heading">Department</h2>
+                    <!-- アッパケースで表示 -->
+                    <h2 class="section-heading  text-uppercase">Department</h2>
                     <h3 class="section-subheading">二部の学科</h3>
                 </div>
                 <div class="row text-center">
+                    <!-- 機械工学科 -->
                     <div class="col-md-4">
+                        <!-- fontawesome-icon -->
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
                         </span>
+                        <!-- 学科名 -->
                         <h4 class="my-3">機械工学科</h4>
+                        <!-- 学科説明 -->
                         <p class="text-left">機械工学の基礎となる材料・機械・流体・熱の4力学の学びに重点を置き、新分野への展開に欠かせない力を培います。
                             そして、応用力に優れたジェネラリストへ成長するために基礎的知識を応用できる力と論理的思考力を養い、技術革新の激しい現代社会で幅広く活躍し、先端を切り拓ける機械工学技術者を育成します。</p>
                         </div>
+                        <!--  電気電子工学科 -->
                         <div class="col-md-4">
+                            <!-- fontawesome-icon -->
                             <span class="fa-stack fa-4x">
                                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
                                 <i class="fas fas fa-plug fa-stack-1x fa-inverse"></i>
                             </span>
+                            <!-- 学科名 -->
                             <h4 class="my-3">電気電子工学科</h4>
+                            <!-- 学科説明 -->
                             <p class="text-left">「電力・電気機器」「電子情報システム」「電子デバイス」の3分野にわたる学びを展開し、産業界で広く活躍でき、国際的に通用する技術者を育成します。また、安心して豊かな生活を送るために、福祉の視点も含め人間の幸せについて考えることができる、高い人間力を培うことも重視します。</p>
                         </div>
+                        <!--  情報通信 -->
                         <div class="col-md-4">
+                            <!-- fontawesome-icon -->
                             <span class="fa-stack fa-4x">
                                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
                                 <i class="fas fa-network-wired fa-stack-1x fa-inverse"></i>
                             </span>
+                            <!-- 学科名 -->
                             <h4 class="my-3">情報通信工学科</h4>
+                            <!-- 学科説明 -->
                             <p class="text-left">ネットワーク、光ファイバなどをはじめとする通信系技術と、コンピュータを中心とする情報系技術の両分野を網羅した情報通信工学を学びます。産業界との積極的な交流で学生の個性を伸ばし、ハードウェアを理解してプログラムも書ける視野の広い情報通信技術者の育成を目指します。</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Portfolio Grid-->
-            
-            <!-- About-->
+            <!-- program-->
             <section class="page-section bg-light" id="program">
                 <dev class="container">
+                    <!-- セクションテーマ-->
                     <div class="text-center">
+                    <!-- セクションタイトル-->
                         <h2 class="section-heading text-uppercase">Program</h2>
+                        <!-- セクションサブタイトル-->
                         <h3 class="section-subheading">プログラムの紹介</h3>
                     </div>
                 </dev>
+                <!-- slick-slider_html -->
                 <div class="sliderArea">
                     <div class="full-screen slider">
-                        <div style="width: 500px; height: 450px; background-color: #76d2f4; margin: 0 25px; padding: 15px;" class="d-flex">
-                            <div class="slide-img01" style="width: 50%;"></div>
-                            <div class="slide-text-content" style="width: 50%; margin: auto 0; padding: 0 20px;">
+                        <!-- 各説明のhtml -->
+                        <div style="height: 400px; background-color: #76d2f4; margin: 0 25px; padding: 15px;" class="d-flex flex-wrap">
+                            <!-- 各説明の画像 -->
+                            <div class="slide-img01 slide-content"></div>
+                            <!-- 各説明のテキストエリア -->
+                            <div class="slide-text-content slide-content">
+                               <div>
+                                <!-- 各說明のタイトル -->
                                 <h3 style="margin: 5px 0" class="text-heading d-block">学科展示室</h3>
+                                <!-- 各説明のテキスト -->
                                 <p class="text-content">各学科の教育・研究内容をご紹介！教員や学生と直接話してみよう！</p>
+                                <!-- 各説明の詳細リンク -->
                                 <a href="" class="text-dark"><span class="fas fa-angle-double-right mr-1"></span>詳細について</a>
+                                </div>
                             </div>
                         </div>
-                        <div style="width: 500px; height: 450px; background-color: #76d2f4; margin: 0 25px; padding: 15px;" class="d-flex">
-                            <div class="slide-img02" style="width: 50%;"></div>
-                            <div class="slide-text-content" style="width: 50%; margin: auto 0; padding: 0 20px;">
-                                <h3 style="margin: 5px 0" class="text-heading d-block">研究室公開</h3>
-                                <p class="text-content">大学生活で必ず所属する研究室。<br>開催時間中は自由に見学できる予定です。<br>自分の学びたいことを見つけよう！</p>
+                        <!-- 各説明のhtml -->
+                        <div style="height: 400px; background-color: #76d2f4; margin: 0 25px; padding: 15px;" class="d-flex flex-wrap">
+                            <!-- 各説明の画像 -->
+                            <div class="slide-img01 slide-content"></div>
+                            <!-- 各説明のテキストエリア -->
+                            <div class="slide-text-content slide-content">
+                               <div>
+                                <!-- 各說明のタイトル -->
+                                <h3 style="margin: 5px 0" class="text-heading d-block">学科展示室</h3>
+                                <!-- 各説明のテキスト -->
+                                <p class="text-content">各学科の教育・研究内容をご紹介！教員や学生と直接話してみよう！</p>
+                                <!-- 各説明の詳細リンク -->
                                 <a href="" class="text-dark"><span class="fas fa-angle-double-right mr-1"></span>詳細について</a>
-                            </div>
-                        </div>
-                        <div style="width: 500px; height: 450px; background-color: #76d2f4; margin: 0 25px; padding: 15px;" class="d-flex">
-                            <div class="slide-img03" style="width: 50%;"></div>
-                            <div class="slide-text-content" style="width: 50%; margin: auto 0; padding: 0 20px;">
-                                <h3 style="margin: 5px 0" class="text-heading d-block">キャンパスツアー</h3>
-                                <p class="text-content">東京千住キャンパスにある魅力的な施設を学生が案内します。</p>
-                                <a href="" class="text-dark"><span class="fas fa-angle-double-right mr-1"></span>詳細について</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- <section class="page-section" id="about">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">About</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="" /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="" /></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>
-                                    Be Part
-                                    <br />
-                                    Of Our
-                                    <br />
-                                    Story!
-                                </h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section> -->
-            <!-- Team-->
-            <!-- <section class="page-section bg-light" id="team">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" />
-                                <h4>Kay Garland</h4>
-                                <p class="text-muted">Lead Designer</p>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
-                                <h4>Larry Parker</h4>
-                                <p class="text-muted">Lead Marketer</p>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="team-member">
-                                <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" />
-                                <h4>Diana Petersen</h4>
-                                <p class="text-muted">Lead Developer</p>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                    </div>
-                </div>
-            </section> -->
-            <!-- Clients-->
-            <!-- <div class="py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/logos/envato.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/logos/designmodo.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/logos/themeforest.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 my-3">
-                            <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/logos/creative-market.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Access-->
+            <!-- access-->
             <section class="page-section" id="access">
+                <!--セクションテーマ-->
                 <div class="container">
                     <div class="text-center">
+                        <!--セクションタイトル-->
                         <h2 class="section-heading text-uppercase">Access</h2>
+                        <!--セクションサブタイトル-->
                         <h3 class="section-subheading" style="margin: 2rem;">交通アクセス</h3>
                     </div>
                     <p class="text-center mb-4">最寄り駅<span class="fas fa-subway ml-1 mr-1"></span>:<strong>「北千住駅」東口（電大口）から徒歩1分</strong></p>
                     <div class="d-flex flex-wrap" style="margin: auto 0;">
-                        <div style="width: 50%;" class="access-map-left" >
-                            <h4 class="ml-4">路線図</h4>
+                        <div class="col-lg-6 col-lg-4" >
+                            <h4 class="ml-4 text-center">路線図</h4>
                             <div class="map01-bg border " style="border-radius: 20px;">
+                                <!--imgの上に配置したいのでpositionプロパティを用いた-->
                                 <div class="map01-heading text-center" style="border-radius: 20px 20px 0 0;">主要駅から千住キャンパスまでの線路図</div>
                             </div>
                         </div>
-                        <div style="width: 50%;" class="access-map-right">
-                            <h4 class="ml-4">エリアマップ</h4>
+                        <div class="col-lg-6 col-lg-4">
+                            <h4 class="ml-4 text-center">エリアマップ</h4>
                             <div class="map02-bg border" style="border-radius: 20px;">
+                                <!--imgの上に配置したいのでpositionプロパティを用いた-->
                                 <div class="map01-heading text-center" style="border-radius: 20px 20px 0 0;">JR 北千住駅 → 東京電機大学千住キャンパス</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Contact-->
+            <!-- info-->
             <section class="page-section bg-light" id="info">
                 <div class="container">
                     <div class="text-center">
@@ -354,12 +280,12 @@
                         </div>
                         <div class="text-center">
                             <div id="success"></div>
-                            <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                            <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">送信</button>
                         </div>
                     </form>
                 </div>
             </section>
-            <!-- Footer-->
+            <!-- footer-->
             <footer class="footer py-4">
                 <div class="container">
                     <div class="row align-items-center">
@@ -367,37 +293,27 @@
                         <div class="col-lg-4 my-3 my-lg-0">
                             <a class="btn btn-dark btn-social mx-2" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html" alt=" 東京電機大学オープンキャンパス（東京千住キャンパス）"><i class="fas fa-school"></i></a>
                         </div>
-                        <!-- <div class="col-lg-4 text-lg-right">
-                            <a class="mr-3" href="#!">Privacy Policy</a>
-                            <a href="#!">Terms of Use</a>
-                        </div> -->
                     </div>
                 </div>
             </footer>
-            <!-- Portfolio Modals-->
-            <!-- Bootstrap core JS-->
+            <!-- import bootstrap-jS-->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-            <!-- Third party plugin JS-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-            <!-- Contact form JS-->
-            <script src="assets/mail/jqBootstrapValidation.js"></script>
-            <script src="assets/mail/contact_me.js"></script>
-            <!-- Core theme JS-->
+            <!-- import custom-js-->
             <script src="js/scripts.js"></script>
-            <!-- Slick-Slider JS-->
+            <!-- import slick-slidar-js-->
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
             <script>
             $(document).on('ready', function() {
             $(".full-screen").slick({
-                centerMode: true, // スライドを中心に表示して部分的に前後のスライドが見えるように設定（奇数番号のスライドに使用）
-                centerPadding: '15%', // センターモード時のサイドパディング。見切れるスライドの幅。’px’または’％’。
+                centerMode: true, // スライド表示方法
+//                centerPadding: '10%', // サイドパディング
                 dots: true, // ドットインジケーターの表示
-                autoplay: true, // 自動再生を設定
-                autoplaySpeed: 2000, // 自動再生のスピード（ミリ秒単位）
-                speed: 1000, // スライド/フェードアニメーションの速度を設定
-                infinite: true // スライドのループを有効にするか
+//                autoplay: true, // 自動再生
+                autoplaySpeed: 2000, // 自動再生のスピード
+                speed: 1000, // フェードアニメーションの速度
+                infinite: true // ループの有功
             });
             });
         </script>
