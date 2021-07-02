@@ -21,6 +21,7 @@
             })(document);
         </script>
     </head>
+    <!-- ロゴアイコンを押すことでページトップに飛ぶようにした -->
     <body id="page-top">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -47,8 +48,11 @@
         <!-- mv -->
         <header class="masthead">
             <div class="container">
-                <div class="mb-4"><img src="./assets/img/logo.png" alt="logo" class="mv-img"></div>
+                <!-- mv-logo -->
+                <div class="mb-4"><img src="./assets/img/logo.png" alt="東京電機大学オープンキャンパス" class="mv-img"></div>
+                <!-- mv-title -->
                 <h3 class="mv-ttl">東京電機大学工学部第二部</h3>
+                <!-- mv-sub_title -->
                 <h3 class="mt-2 mv-ttl">オープンキャンパス</h3>
             </div>
         </header>
@@ -62,29 +66,17 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- 各日程 -->
-                        <div class="portfolio-item border" style="border-radius: 20px;">
+                        <div class="next-item border" style="border-radius: 20px;">
                             <!--終了している日程は.portfolio-link-endで終了のポップを出す-->
-                            <div class="portfolio-link-end">
-                                <div class="portfolio-hover" style="border-radius: 20px 20px 0px 0px;">
-                                    <div class="portfolio-hover-content">終了しました</div>
+                            <div class="next-link-active">
+                                <!-- 「終了しました」を表示 -->
+                                <div class="next-active" style="border-radius: 20px 20px 0px 0px;">
+                                    <div class="next-active-content">終了しました</div>
                                 </div>
                                 <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
                             </div>
-                            <div class="portfolio-caption" style="border-radius: 0px 0px 20px 20px;">
-                                <div class="portfolio-caption-heading">6月20日(日)</div>
-                                <p>一部<br>10:00 〜 12:00</p>
-                                <p>二部<br>10:30 〜 12:30</p>
-                                <p>三部<br>11:00 〜 13:00</p>
-                                <div class="portfolio-caption-subheading text-muted"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- 各日程 -->
-                        <div class="portfolio-item border" style="border-radius: 20px;">
-                                <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
-                            <div class="portfolio-caption" style="border-radius: 0px 0px 20px 20px;">
-                                <div class="portfolio-caption-heading">7月24日(土)</div>
+                            <div class="next-caption" style="border-radius: 0px 0px 20px 20px;">
+                                <div class="next-caption-heading">6月20日(日)</div>
                                 <p>一部<br>10:00 〜 12:00</p>
                                 <p>二部<br>10:30 〜 12:30</p>
                                 <p>三部<br>11:00 〜 13:00</p>
@@ -93,10 +85,22 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- 各日程 -->
-                        <div class="portfolio-item border" style="border-radius: 20px;">
+                        <div class="next-item border" style="border-radius: 20px;">
                                 <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
-                            <div class="portfolio-caption" style="border-radius: 0px 0px 20px 20px;">
-                                <div class="portfolio-caption-heading">7月25日(日)</div>
+                            <div class="next-caption" style="border-radius: 0px 0px 20px 20px;">
+                                <div class="next-caption-heading">7月24日(土)</div>
+                                <p>一部<br>10:00 〜 12:00</p>
+                                <p>二部<br>10:30 〜 12:30</p>
+                                <p>三部<br>11:00 〜 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- 各日程 -->
+                        <div class="next-item border" style="border-radius: 20px;">
+                                <img class="img-fluid" src="assets/img/news-item-img.png" alt="" />
+                            <div class="next-caption" style="border-radius: 0px 0px 20px 20px;">
+                                <div class="next-caption-heading">7月25日(日)</div>
                                 <p>一部<br>10:00 〜 12:00</p>
                                 <p>二部<br>10:30 〜 12:30</p>
                                 <p>三部<br>11:00 〜 13:00</p>
@@ -167,9 +171,12 @@
                         <h3 class="section-subheading">プログラムの紹介</h3>
                     </div>
                     <div class="row">
+                        <!-- レスポンシブのｃｓｓ -->
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="program-item">
-                                <a class="program-link" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html.op_ttl01_h3">
+                                <!-- 電大オープンキャンパスページに飛ばせる -->
+                                <a class="program-link" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html">
+                                    <!-- positionで画像の上に表示 -->
                                     <div class="program-hover" style="border-radius: 20px;">
                                         <div class="program-hover-content" style="padding: 20px;">
                                             <h3 style="margin: 5px 0" class="text-heading">学科展示室</h3>
@@ -182,7 +189,9 @@
                         </div>
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="program-item">
-                                <a class="program-link" href="#Department">
+                                <!-- 電大オープンキャンパスページに飛ばせる -->
+                                <a class="program-link" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html">
+                                    <!-- positionで画像の上に表示 -->
                                     <div class="program-hover" style="border-radius: 20px;">
                                         <div class="program-hover-content" style="padding: 20px;">
                                             <h3 style="margin: 5px 0" class="text-heading">研究室公開</h3>
@@ -195,7 +204,9 @@
                         </div>
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="program-item">
-                                <a class="program-link" href="#Department">
+                                <!-- 電大オープンキャンパスページに飛ばせる -->
+                                <a class="program-link" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html">
+                                    <!-- positionで画像の上に表示 -->
                                     <div class="program-hover" style="border-radius: 20px;">
                                         <div class="program-hover-content" style="padding: 20px;">
                                             <h3 style="margin: 5px 0" class="text-heading">キャンパスツアー</h3>
@@ -251,32 +262,38 @@
                         <h2 class="section-heading text-uppercase">Info</h2>
                         <h3 class="section-subheading">お問い合わせ</h3>
                     </div>
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <form id="contactForm" >
                         <div class="row align-items-stretch mb-5">
+                            <!-- グリットで半分にする -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="name" type="text" placeholder="名前"/>
+                                    <!-- required属性で入力必須にする -->
+                                    <input class="form-control" id="name" type="text" placeholder="名前" required="required"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
+                                    <!-- required属性で入力必須にする -->
                                     <input class="form-control" id="email" type="email" placeholder="メールアドレス" required="required"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group mb-md-0">
+                                    <!-- required属性で入力必須にする -->
                                     <input class="form-control" id="phone" type="tel" placeholder="電話番号" required="required"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+                            <!-- グリットで半分にする -->
                             <div class="col-md-6">
                                 <div class="form-group form-group-textarea mb-md-0">
+                                    <!-- required属性で入力必須にする -->
                                     <textarea class="form-control" id="message" placeholder="メッセージ" required="required"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center">
-                            <div id="success"></div>
-                            <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">送信</button>
+                            <div></div>
+                            <button class="btn btn-primary btn-xl text-uppercase" type="submit">送信</button>
                         </div>
                     </form>
                 </div>
@@ -287,6 +304,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 text-lg-left">Tokyo Denki UnivatCity OpenCampus 2021</div>
                         <div class="col-lg-4 my-3 my-lg-0">
+                            <!-- fontawesomeでアイコンにした -->
+                            <!-- 電大オープンキャンパスのサイトにセイン -->
                             <a class="btn btn-dark btn-social mx-2" href="https://www.dendai.ac.jp/about/admission/opencampus/2021/tokyo_senju.html" alt=" 東京電機大学オープンキャンパス（東京千住キャンパス）"><i class="fas fa-school"></i></a>
                         </div>
                     </div>
